@@ -7,7 +7,8 @@ client.connect(err => {
   const collection = client.db("test").collection("customers").insertOne(myobj, function(err, res) {
     if (err) throw err;
     console.log("1 document inserted");
+    client.close()
   });
   // perform actions on the collection object
-  client.close();
+  ;
 });
